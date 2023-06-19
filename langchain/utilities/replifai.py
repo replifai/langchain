@@ -1,3 +1,9 @@
+"""
+Chain that calls Replif.ai
+
+A remote sandboxed Python REPL
+"""
+
 import sys
 from io import StringIO
 from typing import Dict, Optional
@@ -17,7 +23,20 @@ def get_encoded_string(command: str):
 
 
 class Replifai(BaseModel):
-    """Simulates a remote standalone Python REPL on Replifai"""
+    """Simulates a remote standalone Python REPL on Replifai
+    
+    To use, you should have the environment variable ``REPLIFAI_API_KEY`` set with your https://replif.ai API key
+
+    Parameters:
+        command: The command to run in the REPL (must 'return' a value)
+
+    Example:
+        .. code-block:: python
+
+            from langchain import Replifai
+            replifai = Replifai()
+            replifai.run('return 2+2')
+            """
 
     replifai_api_key: Optional[str] = None
 
