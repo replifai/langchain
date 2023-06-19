@@ -19,6 +19,7 @@ from langchain.utilities.openweathermap import OpenWeatherMapAPIWrapper
 from langchain.utilities.powerbi import PowerBIDataset
 from langchain.utilities.pupmed import PubMedAPIWrapper
 from langchain.utilities.python import PythonREPL
+from langchain.utilities.replifai import Replifai
 from langchain.utilities.scenexplain import SceneXplainAPIWrapper
 from langchain.utilities.searx_search import SearxSearchWrapper
 from langchain.utilities.serpapi import SerpAPIWrapper
@@ -48,6 +49,7 @@ __all__ = [
     "PowerBIDataset",
     "PubMedAPIWrapper",
     "PythonREPL",
+    "Replifai",
     "SceneXplainAPIWrapper",
     "SearxSearchWrapper",
     "SerpAPIWrapper",
